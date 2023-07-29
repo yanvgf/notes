@@ -79,6 +79,22 @@ Uma funcionalidade interessante é ignorar todos os arquivos, menos alguns espec
 # Ignorar tudo
 * 
 
+# Permitir que arquivos dentro de subdiretórios sejam não-ignorados
+!*/
+
 # Não ignorar arquivos do tipo .ipynb
 !*.ipynb
+
+# Não ignorar arquivos dentro da pasta Arquivos
+!Arquivos/*
 ```
+
+## requirements.txt
+
+Uma boa prática de programação é criar um arquivo requirements.txt com todos os pacotes utilizados em uma implementação e suas versões para que outras pessoas possam replicar seus resultados. Para isso, faz-se:
+
+```
+conda list -e > requirements.txt
+```
+
+Isso lista todos os pacotes e suas versões (precisa ter o -e para as versões) e coloca essas informações no arquivo requirements.txt. Para instalar exatamente os mesmos pacotes que estão listados no arquivo, basta dar conda install nesse arquivo (as orientações para isso ficam na primeira linha do arquivo).
