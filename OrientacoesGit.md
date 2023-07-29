@@ -73,3 +73,12 @@ Por exemplo, se eu quero que o git ignore todos os arquivos com terminação .ip
 ```
 *.ipynb
 ```
+
+Uma funcionalidade interessante é ignorar todos os arquivos, menos alguns específicos. Isso pode ser feito inicialmente colocando "*" no .gitignore, que faz todos os arquivos serem ignorados, e em seguida colocando "!" antes dos arquivos ou diretórios que não se quer ignorar. Por exemplo,
+```
+# Ignorar tudo
+* 
+
+# Não ignorar arquivos do tipo .ipynb
+!*.ipynb
+```
