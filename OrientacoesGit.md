@@ -33,6 +33,12 @@ git pull origin <NOME_DA_BRANCH>
 ```
 Esse comando modifica os seus arquivos locais que estão diferentes dos arquivos do repositório remoto. No casso, isso é feito nos arquivos da branch especificada. Ou seja, se há uma branch "yanvgf" (e essa branch deve existir tanto local quanto remotamente), as mudanças serão realizadas nos arquivos dessa branch.
 
+Para fazer o repositório local voltar a ser como era em um commit anterior, utiliza-se os comandos da família do
+```
+git checkout
+```
+Mais detalhes sobre esses comandos podem ser encontrados [aqui](https://git-scm.com/docs/git-checkout).
+
 **2. Atualizar repositório remoto**
 
 Para atualizar o repositório remoto com as mudanças feitas localmente, segue-se os seguintes passos:
@@ -41,13 +47,13 @@ Para atualizar o repositório remoto com as mudanças feitas localmente, segue-s
 ```
 git add <ARQUIVO_1> <PASTA_2/ARQUIVO_2> ...
 ```
-Também pode ser interessante utilizar a flag **-A** na frente do git add, o que faz com que todos os arquivos (que n~so são ignorados) sejam adicionados à área de preparação.
+Também pode ser interessante utilizar a flag **-A** na frente do git add, o que faz com que todos os arquivos (que não são ignorados) sejam adicionados à área de preparação.
 
 - Em seguida, após revisar os arquivos da área de preparação, faz-se o commit dos arquivos para o repositório local (ou seja, inicialmente você altera os arquivos e em seguida salva eles naquele novo estado no repositório local):
 ```
-git commit -am "MENSAGEM DE COMMIT"
+git commit -m "MENSAGEM DE COMMIT"
 ```
-A flag **-am** (-a -m) commita todos os arquivos que estão na zona de preparação (-a) e adiciona uma mensagem a esse commit (-m), que deve ser uma descrição concisa das mudanças realizadas.
+A flag **-m** commita todos os arquivos que estão na zona de preparação e adiciona uma mensagem a esse commit (-m), que deve ser uma descrição concisa das mudanças realizadas.
 
 - Por fim, atualizado o repositório local, atualiza-se o repositório remoto com as mudanças feitas:
 ```
