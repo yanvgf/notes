@@ -40,25 +40,13 @@ Para executar os demais códigos, eu acesso o servidor utilizando o comando:
 
 ## 3. Instalações
 
-Para instalar bibliotecas etc., é fundamental que eu instale apenas para o meu user, por meio do
-comando:
+Para instalar bibliotecas etc., é fundamental que eu instale apenas para o meu user, por meio do comando:
 
 ```pip install --user nome_pacote```
 
+No entanto, **NÃO** é seguro instalar pacotes assim por problemas de incompatibilidade. Para fazer instalações mais seguras e organizar melhor os pacotes em cada um dos seus projetos, é fortemente recomendado o uso do **conda**.
 
-
-
-## 4. htop
-
-No _htop_, é útil conhecer os seguintes comandos:
-
-**F5**: organiza os processos baseado em algum critério (critérios podem ser vistos com F5 seguido de F6)
-**I**: quando já foi dado F5, o I (maiúsculo) inverte a ordem do sort (fica descrescente)
-
-
-
-
-## 5. conda
+### 3.1. conda
 
 É muito recomendado utilizar um ambiente personalizado com as versões desejadas das bibliotecas e do Python. O conda permite gerenciar esses ambientes.
 
@@ -94,6 +82,16 @@ Uma boa prática de programação é criar um arquivo requirements.txt com todos
 ```conda list -e > requirements.txt```
 
 Isso lista todos os pacotes e suas versões (precisa ter o -e para as versões) e coloca essas informações no arquivo requirements.txt. Para instalar exatamente os mesmos pacotes que estão listados no arquivo, basta dar conda install nesse arquivo (as orientações para isso ficam na primeira linha do arquivo).
+
+
+
+## 4. htop
+
+No _htop_, é útil conhecer os seguintes comandos:
+
+**F5**: organiza os processos baseado em algum critério (critérios podem ser vistos com F5 seguido de F6)
+**I**: quando já foi dado F5, o I (maiúsculo) inverte a ordem do sort (fica descrescente)
+
 
 
 
