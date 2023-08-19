@@ -33,7 +33,13 @@ git pull origin <NOME_DA_BRANCH>
 ```
 Esse comando modifica os seus arquivos locais que estão diferentes dos arquivos do repositório remoto. No casso, isso é feito nos arquivos da branch especificada. Ou seja, se há uma branch "yanvgf" (e essa branch deve existir tanto local quanto remotamente), as mudanças serão realizadas nos arquivos dessa branch.
 
-Para fazer o repositório local voltar a ser como era em um commit anterior, utiliza-se os comandos da família do
+Outra forma de fazer isso é com o comando
+```
+git fetch origin <NOME_DA_BRANCH>
+```
+Em linhas gerais, o fetch é uma alternativa mais segura ao pull, uma vez que o primeiro não atualiza automaticamente seus arquivos com o novo conteúdo presente no repositório remoto.
+
+Para fazer o repositório local voltar a ser como era em um commit anterior ou efetivamente atualizar seus arquivos após o fetch, utiliza-se os comandos da família do
 ```
 git checkout
 ```
