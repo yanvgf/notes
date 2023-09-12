@@ -67,6 +67,22 @@ git push origin <NOME_DA_BRANCH>
 ```
 Esse comando segue a mesma lógica do git pull.
 
+**Criar novas branches**
+
+Ao trabalhar com repositórios remotos, é interessante ter uma branch própria e ir atualizando e testando ela antes de mandar pra principal.
+
+Para criar uma nova branch:
+```
+git checkout -b nome_da_branch
+```
+
+Isso cria uma branch nova (-b) localmente com as mesmas alterações da branch que você estava usando antes.
+
+Para fazer essa branch ser criada no remoto, basta dar push e ela será automaticamente criada. É importante lembrar de dar push para a sua branch:
+```
+git push origin nome_da_branch
+```
+
 A seguir, algumas imagens úteis para o entendimento dos principais comandos do git:
 
 ![img1](../Imagens/git-data-transport.png)
@@ -110,3 +126,12 @@ conda list -e > requirements.txt
 ```
 
 Isso lista todos os pacotes e suas versões (precisa ter o -e para as versões) e coloca essas informações no arquivo requirements.txt. Para instalar exatamente os mesmos pacotes que estão listados no arquivo, basta dar conda install nesse arquivo (as orientações para isso ficam na primeira linha do arquivo).
+
+## Verificar histórico de ações
+
+O comando ```git log``` permite verificar o histórico do git
+```
+git log --one-line --graph -numero_de_linhas
+```
+
+O numero_de_linhas dita quanto do histórico de commits será mostrado. 
